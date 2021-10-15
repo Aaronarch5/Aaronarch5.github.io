@@ -39,48 +39,17 @@
       </li>
 
       <li>
-        <a href ="#eng" data-reload language='english'>EN</a>
+        <i class="fas fa-language"></i><a href ="#eng" >EN</a>
                     
       </li>
      
      <li>
-      <a href ="#es" data-reload  language='español'>ES</a>
+      <a href ="#es" >ES</a>
      </li>
 
     </ul>
     
   </nav>
-<script>
-
-var dataReload= document.querySelectorAll("[data-reload]");
-//Translation every language
-  var language={
-    eng:{
-      welcome:"Hi, I'm Aaron",
-      degree1:"Bionics Engineer" 
-    },
-    es:{
-      welcome: "Hola, Soy Aarón",
-      degree1:"Ingeniero en Bionica"
-    }
-  };
-if(window.location.hash)
-{
-  if(window.location.hash==="#eng")
-  {
-    hi.textContent = language.eng.welcome;
-  }
-}
-
-//define language reload onclick illiteration
-
-for(i=0; i<=dataReload.length;i++)
-{
-  dataReload[i].onclick = function(){location.reload(true)};
-}
-
-
-</script>
   <section id="welcome-section" class="welcome-section">
     <h1 id ="hi">Hola, Soy Aarón</h1>
     <p id="degree1" >Ingeniero en biónica</p>
