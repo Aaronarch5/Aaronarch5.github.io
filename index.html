@@ -36,23 +36,53 @@
         <a href="#contact">Contacto</a>
 
       </li>
-      
+
       <li>
-        <a href ="#" language='english' class="active">EN</a>
+        <a href ="eng" data-reload language='english'>EN</a>
                     
-     </li>
+      </li>
      
      <li>
-      <a href ="#" language='español'>ES</a>
+      <a href ="es" data-reload  language='español'>ES</a>
      </li>
 
     </ul>
     
   </nav>
+<script>
 
+var dataReload= document.querySelectorAll("[data-reload]");
+//Translation every language
+  var language={
+    eng:{
+      hi:"Hi, I'm Aaron",
+      degree1:"Bionics Engineer" 
+    },
+    es:{
+      hi: "Hola, Soy Aarón",
+      degree1:"Ingeniero en Bionica"
+    }
+  };
+if(window.location.hash)
+{
+  if(window.location.hash==="#es")
+  {
+    hi.textContent = language.es.hi;
+  }
+}
+
+//define language reload onclick illiteration
+
+for(i=0; i<=dataReload.length;i++)
+{
+  dataReload[i].onclick = function(){location.reload(true)};
+}
+
+
+</script>
   <section id="welcome-section" class="welcome-section">
-    <h1>Hola, Soy Aarón</h1>
-    <p>Ingeniero en biónica</p>
+    <h1 id ="hi">Hola, Soy Aarón</h1>
+    <p id="degree1" >Ingeniero en biónica</p>
   </section>
   <section id="projects" class="projects-section">
     <h2 class="projects-section-header">Estos son algunos de mis proyectos</h2>
