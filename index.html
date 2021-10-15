@@ -55,11 +55,11 @@ var dataReload= document.querySelectorAll("[data-reload]");
 //Translation every language
   var language={
     eng:{
-      hi:"Hi, I'm Aaron",
+      welcome:"Hi, I'm Aaron",
       degree1:"Bionics Engineer" 
     },
     es:{
-      hi: "Hola, Soy Aarón",
+      welcome: "Hola, Soy Aarón",
       degree1:"Ingeniero en Bionica"
     }
   };
@@ -67,7 +67,7 @@ if(window.location.hash)
 {
   if(window.location.hash==="#eng")
   {
-    hi.textContent = language.eng.hi;
+    hi.textContent = language.eng.welcome;
   }
 }
 
